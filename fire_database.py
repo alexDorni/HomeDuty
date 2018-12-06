@@ -1,6 +1,8 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import os
+
 
 """ Using Cloud Firestore from Firebase it will have (Beta):
 
@@ -11,11 +13,12 @@ from firebase_admin import firestore
     Document deletes        20K/day 
 
 """
-
+"""
 # Use the application default credentials
 cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred, {
-  'projectId': project_id,
+  'projectId': "homeduty-19661207",
 })
 
 db = firestore.client()
+"""
