@@ -4,9 +4,12 @@ from enum import Enum, unique
 # make the enums unique
 @unique
 class Tab(Enum):
-    LWW = "Last Week Winners"
-    PROFILE = "Your Profile"
-    TW = "This week"
+    Login = "Login"
+    Register = "Register"
+    RecoverPass = "RecoverPass"
+    Profile = "Profile"
+    LastWeek = "LastWeek"
+    ThisWeek = "ThisWeek"
 
     def get_name(self):
         return self.name
