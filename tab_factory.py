@@ -1,9 +1,12 @@
 import register_tab
+import login_tab
+import recover_pass
 
 
 class Login:
     def __init__(self, master=None):
         self._master = master
+        login_tab.LoginUi(master=self._master)
 
 
 class Register(register_tab.RegUi):
@@ -15,6 +18,7 @@ class Register(register_tab.RegUi):
 class Recoverpass:
     def __init__(self, master=None):
         self._master = master
+        recover_pass.RecoveUiPass(master=self._master)
 
 
 class Profile:

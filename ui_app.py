@@ -10,4 +10,5 @@ class InterfaceDuty(tk.Frame):
         self.master.title("Home duty")
         self.master.geometry("700x500")
         self.pack()
-        tab_controller.TabController(master)
+        tab = tab_controller.TabController(master)
+        tab.create_tabs()

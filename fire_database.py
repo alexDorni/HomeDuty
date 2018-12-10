@@ -13,7 +13,7 @@ import os
     Document deletes        20K/day 
 
 """
-"""
+
 # Use the application default credentials
 cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred, {
@@ -21,4 +21,3 @@ firebase_admin.initialize_app(cred, {
 })
 
 db = firestore.client()
-"""

@@ -10,7 +10,6 @@ class TabController:
     def __init__(self, master=None):
         self._master = master
         self.tab_control = ttk.Notebook(self._master)
-        self.create_tabs()
 
     def create_tabs(self):
         for enum_tab in tab_enum.Tab:
