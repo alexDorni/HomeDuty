@@ -1,5 +1,4 @@
 import tkinter as tk
-import tkinter.ttk as ttk
 import tab_controller
 
 
@@ -12,3 +11,4 @@ class InterfaceDuty(tk.Frame):
         self.pack()
         tab = tab_controller.TabController(master)
         tab.create_tabs()
+

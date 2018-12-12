@@ -1,6 +1,4 @@
-import register_tab
-import login_tab
-import recover_tab
+from tabs_dir import recover_tab, register_tab, login_tab
 
 
 class Login:
@@ -18,7 +16,7 @@ class Register(register_tab.RegUi):
 class Recoverpass:
     def __init__(self, master=None):
         self._master = master
-        recover_tab.RecoveUiPass(master=self._master)
+        recover_tab.RecoverUiPass(master=self._master)
 
 
 class Profile:

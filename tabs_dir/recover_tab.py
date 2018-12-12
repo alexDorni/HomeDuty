@@ -1,7 +1,7 @@
 import tkinter as tk
 
 
-class RecoveUiPass:
+class RecoverUiPass:
     email_ins  = None
     finish_btn = None
 

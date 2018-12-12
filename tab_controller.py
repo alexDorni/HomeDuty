@@ -1,13 +1,12 @@
-import tab_enum
-import tkinter as tk
+from tabs_dir import tab_enum
 import tkinter.ttk as ttk
 import tab_factory
 
 
 class TabController:
-    tab_frame_dic = {}
 
     def __init__(self, master=None):
+        self.tab_frame_dic = {}
         self._master = master
         self.tab_control = ttk.Notebook(self._master)
 
