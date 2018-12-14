@@ -1,5 +1,5 @@
 import tkinter as tk
-import tab_controller
+from tabs_dir import tab_controller
 
 
 class InterfaceDuty(tk.Frame):

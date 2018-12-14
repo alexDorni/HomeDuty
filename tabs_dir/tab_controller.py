@@ -1,6 +1,5 @@
-from tabs_dir import tab_enum
+from tabs_dir import tab_enum, tab_factory
 import tkinter.ttk as ttk
-import tab_factory
 
 
 class TabController:
@@ -14,8 +13,8 @@ class TabController:
         for enum_tab in tab_enum.Tab:
             # Create frame
             tab_frame = ttk.Frame(self.tab_control)
-            self.tab_frame_dic.update({enum_tab.get_name(): tab_frame})
-            self.tab_control.add(tab_frame, text=enum_tab.get_val())
+            self.tab_frame_dic.update({enum_tab.name: tab_frame})
+            self.tab_control.add(tab_frame, text=enum_tab.value)
         self.tab_control.pack(expand=1, fill="both")
         self.create_ui_tabs()
 

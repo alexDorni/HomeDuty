@@ -1,13 +1,15 @@
 import ui_app as ui
-import firestore_database
+import user_register_dir.builder_dir.task_types as tt
+import firestore_database as db
 
 
 def main():
     root = ui.tk.Tk()
     app = ui.InterfaceDuty(root)
-    fd = firestore_database.FireData()
-    fd.push_data({u'cevaaa': u'altceva'})
-    fd.get_data()
+    d = db.FireData()
+    lista = ("email", "daily", "tasks", "garbage")
+    d.push_data(lista,)
+    d.get_data()
     app.mainloop()
 
 

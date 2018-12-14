@@ -21,15 +21,18 @@ class FireData:
         })
 
         self.db = firestore.client()
-        self.users_ref = self.db.collection(u'users').document(u'roommates')
+
 
     # Must be implemented for all the data
     def get_data(self):
         users_ref = self.db.collection(u'users')
         docs = users_ref.get()
 
+        print("INTRA")
         for doc in docs:
             print(u'{} => {}'.format(doc.id, doc.to_dict()))
 
-    def push_data(self, user_data):
-        self.users_ref.set(user_data)
+    def push_data(self, *args):
+        self.db.collection(u'users').document(u'roommates').\
+            collection(args[0]).document(args[1]).collection(args[2]).\
+            document(args[3]).set({u'plz1': u'mergi'})
