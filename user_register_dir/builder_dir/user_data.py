@@ -15,3 +15,5 @@ class DataPattern:
 
     def set_attr(self, task_attr):
         self._task_attr = task_attr
+
+

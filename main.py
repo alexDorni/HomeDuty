@@ -8,7 +8,7 @@ def main():
     app = ui.InterfaceDuty(root)
     d = db.FireData()
     lista = ("email", "daily", "tasks", "garbage")
-    d.push_data(lista,)
+    d.push_data("email", "daily", "tasks", "garbage")
     d.get_data()
     app.mainloop()
 

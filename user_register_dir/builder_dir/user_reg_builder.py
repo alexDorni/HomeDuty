@@ -1,11 +1,12 @@
 from user_register_dir.builder_dir import task_types, builder_database as builder, tasks_attr, tasks_name
+from user_register_dir.builder_dir import task_type_enum as type_enum
 
 
 # User get pattern
 class UserRegBuilder(builder.Builder):
 
-    def __init__(self, task_type=None, task_name=None, task_attr=None):
-        self.__task_type = task_type
+    def __init__(self, task_name=None, task_attr=None):
+        self.__task_type = type_enum.TaskTypeEnum()
         self.__task_name = task_name
         self.__task_attr = task_attr
 
