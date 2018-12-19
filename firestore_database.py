@@ -2,6 +2,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import os
+
 """ Using Cloud Firestore from Firebase it will have (Beta):
 
     Stored data             1 GB total 
@@ -31,9 +32,7 @@ class FireData:
 
         for doc in docs:
             print(u'{} => {}'.format(doc.id, doc.to_dict()))
-            print(doc.id.split('_')[1])
-
-    def push_data(self, *args):
-        self.db.collection(u'users').document(u'roommates').\
-            collection(args[0]).document(args[1]).collection(args[2]).\
-            document(args[3] + "_token").set({u'plz1': u'mergi'})
+    #
+    # def push_data(self):
+    #     task = builder.TaskDataBuilder().name(u'garbage').build()
+    #     self.db.collection(u'tasks').document().set(task.to_dict())

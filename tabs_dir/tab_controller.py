@@ -13,6 +13,7 @@ class TabController:
         for enum_tab in tab_enum.Tab:
             # Create frame
             tab_frame = ttk.Frame(self.tab_control)
+            # {Enum : new tab Frame}
             self.tab_frame_dic.update({enum_tab.name: tab_frame})
             self.tab_control.add(tab_frame, text=enum_tab.value)
         self.tab_control.pack(expand=1, fill="both")

@@ -33,5 +33,6 @@ class RegUi:
         self.password_ret.grid(row=2, column=1)
 
     def create_register_btn(self):
-        self.register_btn = tk.Button(self._master, text="Registration")
+        
+        self.register_btn = tk.Button(self._master, text="Registration", command=)
         self.register_btn.grid(row=3, column=5)
