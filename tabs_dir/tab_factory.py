@@ -7,7 +7,7 @@ class Login:
         tab_login.LoginUi(master=self._master)
 
 
-class Register(tab_register.RegUi):
+class Register:
     def __init__(self, master=None):
         self._master = master
         tab_register.RegUi(master=self._master)
