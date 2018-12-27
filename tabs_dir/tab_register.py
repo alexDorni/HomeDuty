@@ -1,14 +1,17 @@
 import tkinter as tk
+from tabs_dir.tab_handler.reg_adapt_handler import RegAdaptHandler
 
 
 class RegUi:
-    user_name    = None
-    password_ins = None
-    password_ret = None
-    register_btn = None
 
     def __init__(self, master=None):
         self._master = master
+
+        self.user_name    = None
+        self.password_ins = None
+        self.password_ret = None
+        self.register_btn = None
+
         self.create_ui_register()
 
     def create_ui_register(self):
@@ -40,5 +43,6 @@ class RegUi:
         # ui_error = RegisterActionHandler.execute()
         # if ui_error:
         # print(ui_error.msg)
-
-        pass
+        # instantiate here RegAdaptHandler
+        reg_adapt_handler = RegAdaptHandler(self)
+        reg_adapt_handler.execute()

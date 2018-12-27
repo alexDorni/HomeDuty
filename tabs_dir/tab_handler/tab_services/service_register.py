@@ -6,6 +6,7 @@ class RegService:
     def __validate(register_info):
         # Validate fields from Register Tab
         # Return a bool
+        print(register_info.user_name.get())
         pass
 
     # The validate param is the validate function
