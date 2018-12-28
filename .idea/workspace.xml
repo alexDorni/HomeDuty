@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1be84106-2e04-45b2-ba3b-f788d1bea46b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/reg_adapt_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/reg_adapt_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs_dir/tab_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_register.py" afterDir="false" />
     </list>
@@ -28,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tabs_dir/tab_register.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -58,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="43" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -67,8 +65,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firestore_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="421">
+              <caret line="29" column="78" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,8 +155,8 @@
         <option value="$PROJECT_DIR$/tabs_dir/tab_factory.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/reg_adapt_handler.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_register.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" />
       </list>
     </option>
   </component>
@@ -327,14 +328,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1974" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2527233" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25578833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14122534" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24818276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -345,7 +345,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24972437" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24972437" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -456,41 +456,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler_base.py" />
-    <entry file="file://$PROJECT_DIR$/user_tasks_builder/task_data_builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_tasks_builder/task_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firestore_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/venv/Lib/site-packages/setuptools-39.1.0-py3.6.egg!/setuptools/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="179" column="6" selection-start-line="179" selection-end-line="179" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -522,17 +487,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_tasks_builder/task_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="43" />
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_tasks_builder/task_data_builder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/venv/Lib/site-packages/setuptools-39.1.0-py3.6.egg!/setuptools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2822">
+          <caret line="179" column="6" selection-start-line="179" selection-end-line="179" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firestore_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="29" column="78" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_register.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

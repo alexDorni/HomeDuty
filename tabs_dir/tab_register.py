@@ -46,3 +46,39 @@ class RegUi:
         # instantiate here RegAdaptHandler
         reg_adapt_handler = RegAdaptHandler(self)
         reg_adapt_handler.execute()
+
+    # Getters
+    @property
+    def user_name(self):
+        return self._user_name
+
+    @property
+    def password_ins(self):
+        return self._password_ins
+
+    @property
+    def password_ret(self):
+        return self._password_ret
+
+    @property
+    def register_btn(self):
+        return self._register_btn
+
+    # Setters
+    @user_name.setter
+    def user_name(self, val):
+        self._user_name = val
+
+    @password_ins.setter
+    def password_ins(self, val):
+        self._password_ins = val
+
+    @password_ret.setter
+    def password_ret(self, val):
+        self._password_ret = val
+
+    @register_btn.setter
+    def register_btn(self, val):
+        self._register_btn = val
+
+
