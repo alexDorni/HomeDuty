@@ -22,17 +22,3 @@ class FireData:
         })
 
         self.db = firestore.client()
-
-
-    # Must be implemented for all the data
-    def get_data(self):
-        users_ref = self.db.collection(u'users').document(u'roommates').\
-                    collection(u'email').document(u'daily').collection(u'tasks')
-        docs = users_ref.get()
-
-        for doc in docs:
-            print(u'{} => {}'.format(doc.id, doc.to_dict()))
-    #
-    # def push_data(self):
-    #     task = builder.TaskDataBuilder().name(u'garbage').build()
-    #     self.db.collection(u'tasks').document().set(task.to_dict())

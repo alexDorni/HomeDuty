@@ -5,10 +5,6 @@ class TaskDataBuilder:
     def __init__(self):
         self.task = task_data.TaskData()
 
-    def name(self, name):
-        self.task.name = name
-        return self
-
     def user_id(self, user_id):
         self.task.user_id = user_id
         return self

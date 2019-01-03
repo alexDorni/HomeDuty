@@ -3,7 +3,6 @@ import json
 
 class TaskData:
     def __init__(self):
-        self.name = u'None'
         self.user_id = u'None'
         self.type = u'None'
         self.state = u'None'
