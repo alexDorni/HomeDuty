@@ -1,4 +1,4 @@
-from user_info_builder import user_info_builder
+from user_builder.user_info_builder import user_info_builder
 
 
 class UserInfoDAO:
@@ -21,32 +21,42 @@ class UserInfoDAO:
         self.__last_week_winner = None
         self.__winning_rounds = 0
 
-    def user_info_creation(self):
-        self.__username_creation()
-        self.__credentials_creation()
-        self.__history_creation()
+    def creation_user_info(self):
+        self.__creation_username()
+        self.__creation_credentials()
+        self.__creation_history()
 
-    def __username_creation(self):
+    def __creation_username(self):
+        # Create the username obj
         username_attr = user_info_builder.UserInfoBuilder().first_name(self.__user_info_taped.first_name).\
                                                             last_name(self.__user_info_taped.last_name).\
                                                             user_name(self.__user_info_taped.user_name).\
                                                             build()
 
         user_info_json = UserInfoDAO.__get_valid_json_for_user_info(username_attr)
+
+        # Push username into db
         self.__user_db.collection(self.__user_info).document(self.__username).set(user_info_json)
 
-    def __credentials_creation(self):
-        user_credentials = user_info_builder.UserInfoBuilder().password_crypt(self.__user_info_taped.password_crypt).\
-                                                                build()
+    def __creation_credentials(self):
+        # Create obj with crypt password
+        user_credentials = user_info_builder.UserInfoBuilder().password(self.__user_info_taped.password).\
+                                                               build()
 
         user_credentials_json = UserInfoDAO.__get_valid_json_for_user_credentials(user_credentials)
+
+        # Push crypt password into db
         self.__user_db.collection(self.__user_info).document(self.__credentials).set(user_credentials_json)
 
-    def __history_creation(self):
+    def __creation_history(self):
+        # Create user history obj
         user_history = user_info_builder.UserInfoBuilder().last_week_winner(self.__last_week_winner).\
-                                                            winning_rounds(self.__winning_rounds).\
-                                                            build()
+                                                           winning_rounds(self.__winning_rounds).\
+                                                           build()
+
         user_history_json = UserInfoDAO.__get_valid_json_for_user_history(user_history)
+
+        # Push user history into db
         self.__user_db.collection(self.__user_info).document(self.__history).set(user_history_json)
 
     @staticmethod
@@ -54,7 +64,7 @@ class UserInfoDAO:
         json = user_info.obj_to_dict()
 
         json.pop("last_week_winner")
-        json.pop("password_crypt")
+        json.pop("password")
         json.pop("winning_rounds")
 
         return json
@@ -78,7 +88,7 @@ class UserInfoDAO:
         json.pop("first_name")
         json.pop("last_name")
         json.pop("last_week_winner")
-        json.pop("password_crypt")
+        json.pop("password")
         json.pop("user_name")
 
         return json

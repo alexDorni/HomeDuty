@@ -1,4 +1,4 @@
-from tabs_dir import tab_recover, tab_register, tab_login
+from tabs_dir.tabs_ui import tab_register, tab_recover, tab_login
 
 
 class Login:

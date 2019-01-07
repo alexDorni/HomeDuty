@@ -54,12 +54,12 @@ class RegUi:
         self.register_btn.grid(row=5, column=5)
 
     def command_reg_btn(self):
-        # ui_error = RegisterActionHandler.execute()
-        # if ui_error:
-        # print(ui_error.msg)
-        # instantiate here RegAdaptHandler
+        # TODO PROGRESS TOOLBAR IMPLEMENTATION
         reg_adapt_handler = RegAdaptHandler(self)
-        reg_adapt_handler.execute()
+        if reg_adapt_handler.execute():
+            tk.messagebox.showinfo("Registration", "Registration Successful")
+        else:
+            tk.messagebox.showinfo("Registration", "Registration Failed")
 
     # Getters
     @property

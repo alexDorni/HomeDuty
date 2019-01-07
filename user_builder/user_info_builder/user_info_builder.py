@@ -1,4 +1,4 @@
-from user_info_builder import user_info_data as user_info
+from user_builder.user_info_builder import user_info_data as user_info
 
 
 class UserInfoBuilder:
@@ -17,8 +17,8 @@ class UserInfoBuilder:
         self.user_info.last_name = last_name
         return self
 
-    def password_crypt(self, pass_crypt):
-        self.user_info.password_crypt = pass_crypt
+    def password(self, password):
+        self.user_info.password = password
         return self
 
     def last_week_winner(self, last_week_winner):

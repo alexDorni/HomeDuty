@@ -6,7 +6,7 @@ class UserInfo:
         self.user_name = None
         self.first_name = None
         self.last_name = None
-        self.password_crypt = None
+        self.password = None
         self.last_week_winner = None
         self.winning_rounds = None
 
