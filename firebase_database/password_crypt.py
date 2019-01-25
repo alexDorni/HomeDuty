@@ -4,10 +4,10 @@ import os
 
 
 # Crypt the password
-def hash_password(password):
+def crypt_password(item):
     salt = hashlib.sha256(os.urandom(60)).hexdigest().encode("ascii")
     pwd_hash = hashlib.pbkdf2_hmac('sha512',
-                                   password.encode('utf-8'),
+                                   item.encode('utf-8'),
                                    salt,
                                    100000)
     pwd_hash = binascii.hexlify(pwd_hash)
@@ -17,13 +17,13 @@ def hash_password(password):
 
 
 # Decrypt the password
-def verify_password(stored_password, provide_password):
-    salt = stored_password[:64]
-    stored_password = stored_password[64:]
-    pwd_hash = hashlib.pbkdf2_hmac('sha512',
-                                   provide_password.encode('utf-8'),
-                                   salt.encode('ascii'),
-                                   100000)
+def verify_password(hashed_password, provided_password):
+    salt = hashed_password[:64]
+    stored_password = hashed_password[64:]
+
+    pwd_hash = hashlib.pbkdf2_hmac('sha512', provided_password.encode('utf-8'),
+                                   salt.encode('ascii'), 100000)
+
     pwd_hash = binascii.hexlify(pwd_hash).decode('ascii')
 
     # Return a bool

@@ -30,7 +30,6 @@ class UserInfoDAO:
         # Create the username obj
         username_attr = user_info_builder.UserInfoBuilder().first_name(self.__user_info_taped.first_name).\
                                                             last_name(self.__user_info_taped.last_name).\
-                                                            user_name(self.__user_info_taped.user_name).\
                                                             build()
 
         user_info_json = UserInfoDAO.__get_valid_json_for_user_info(username_attr)
@@ -77,7 +76,6 @@ class UserInfoDAO:
         json.pop("last_name")
         json.pop("last_week_winner")
         json.pop("winning_rounds")
-        json.pop("user_name")
 
         return json
 
@@ -89,6 +87,5 @@ class UserInfoDAO:
         json.pop("last_name")
         json.pop("last_week_winner")
         json.pop("password")
-        json.pop("user_name")
 
         return json

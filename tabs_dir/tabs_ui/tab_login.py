@@ -9,7 +9,7 @@ class LoginUi:
         self._master = master
 
         self.image_label = None
-        self.email_ins = None
+        self.user_name = None
         self.password_ins = None
         self.login_btn = None
 
@@ -29,9 +29,9 @@ class LoginUi:
         self.image_label.grid(row=0, column=10)
 
     def create_email(self):
-        tk.Label(self._master, text="Email").grid(row=4)
-        self.email_ins = tk.Entry(self._master)
-        self.email_ins.grid(row=4, column=1)
+        tk.Label(self._master, text="User Name").grid(row=4)
+        self.user_name = tk.Entry(self._master)
+        self.user_name.grid(row=4, column=1)
 
     def create_password(self):
         tk.Label(self._master, text="Password").grid(row=5)
@@ -51,8 +51,8 @@ class LoginUi:
 
     # Getters
     @property
-    def email_ins(self):
-        return self._email_ins
+    def user_name(self):
+        return self._user_name
 
     @property
     def password_ins(self):
@@ -63,9 +63,9 @@ class LoginUi:
         return self._login_btn
 
     # Setters
-    @email_ins.setter
-    def email_ins(self, val):
-        self._email_ins = val
+    @user_name.setter
+    def user_name(self, val):
+        self._user_name = val
 
     @password_ins.setter
     def password_ins(self, val):

@@ -59,7 +59,8 @@ class RegUi:
         if reg_adapt_handler.execute():
             tk.messagebox.showinfo("Registration", "Registration Successful")
         else:
-            tk.messagebox.showinfo("Registration", "Registration Failed")
+            tk.messagebox.showinfo("Registration", "Registration Failed! \nSome problems could be:\n"
+                                                   "Blank fields \nWrong password \nUser already exists")
 
     # Getters
     @property
