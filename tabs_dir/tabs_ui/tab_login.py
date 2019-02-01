@@ -1,7 +1,13 @@
-from tabs_dir.tab_handler.login_adapt_handler import LoginAdaptHandler
 import tkinter as tk
-from tkinter import messagebox
 import os
+
+from tabs_dir.tab_controller_logic.tab_controller_logic import ControllerUiLogic
+from tabs_dir.tab_handler.login_adapt_handler import LoginAdaptHandler
+from firebase_database import database_obj
+from tkinter import messagebox
+
+# pip install pillow ( the new PIL )
+from PIL import Image, ImageTk
 
 
 class LoginUi:
@@ -16,35 +22,41 @@ class LoginUi:
         self.create_ui_login()
 
     def create_ui_login(self):
-        self.create_image()
-        self.create_email()
-        self.create_password()
-        self.create_login_btn()
+        self.__create_image()
+        self.__create_email()
+        self.__create_password()
+        self.__create_login_btn()
 
-    def create_image(self):
-        image_path = os.getcwd() + "\images" + "\image_user.gif"
-        photo = tk.PhotoImage(file=image_path)
+    def __create_image(self):
+        image_path = os.getcwd() + "\images" + "\default_img_user.png"
+        image = Image.open(image_path)
+        image_resize = image.resize((250, 250), Image.ANTIALIAS)
+        photo = ImageTk.PhotoImage(image_resize)
+
         self.image_label = tk.Label(self._master, image=photo)
         self.image_label.image = photo
         self.image_label.grid(row=0, column=10)
 
-    def create_email(self):
+    def __create_email(self):
         tk.Label(self._master, text="User Name").grid(row=4)
         self.user_name = tk.Entry(self._master)
         self.user_name.grid(row=4, column=1)
 
-    def create_password(self):
+    def __create_password(self):
         tk.Label(self._master, text="Password").grid(row=5)
         self.password_ins = tk.Entry(self._master)
         self.password_ins.grid(row=5, column=1)
 
-    def create_login_btn(self):
-        self.login_btn = tk.Button(self._master, text="Login", command=self.command_login_btn)
+    def __create_login_btn(self):
+        self.login_btn = tk.Button(self._master, text="Login", command=self.__command_login_btn)
         self.login_btn.grid(row=8, column=10)
 
-    def command_login_btn(self):
+    def __command_login_btn(self):
         login_handler = LoginAdaptHandler(self)
         if login_handler.execute():
+            database_obj.user_name_login = self.user_name.get()
+            ControllerUiLogic.disable_login_tab()
+            ControllerUiLogic.enable_tabs_after_login()
             messagebox.showinfo("Login", "Successful Login")
         else:
             messagebox.showinfo("Login", "Incorrect username or password")

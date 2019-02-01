@@ -1,5 +1,6 @@
 import tkinter as tk
-from tabs_dir import tab_controller
+from tabs_dir.tab_controller_logic import tab_controller
+import global_instances
 
 
 class InterfaceDuty(tk.Frame):
@@ -10,5 +11,8 @@ class InterfaceDuty(tk.Frame):
         self.master.geometry("700x500")
         self.pack()
         tab = tab_controller.TabController(master)
-        tab.create_tabs()
 
+        # Global instance for tabs ui
+        global_instances.TABS = tab
+
+        tab.create_tabs()

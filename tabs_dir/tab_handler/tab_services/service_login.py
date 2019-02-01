@@ -24,8 +24,11 @@ class LoginService:
                 # Password field
                 password_field = login_info.password_ins.get()
 
+                # DB -> users(col) -> username(doc) -> User_info(col) -> Credentials(doc) -> {password : hashed}
                 password_from_db = database_obj.db_users.document(username_field).\
-                    collection("User_info").document("Credentials").get()
+                                                         collection("User_info").\
+                                                         document("Credentials").\
+                                                         get()
 
                 # Key of the hashed password
                 crypt_pass = password_from_db.to_dict()['password']
