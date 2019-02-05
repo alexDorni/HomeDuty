@@ -13,6 +13,10 @@ class UserInfoBuilder:
         self.user_info.last_name = last_name
         return self
 
+    def image(self, image):
+        self.user_info.image = image
+        return self
+
     def password(self, password):
         self.user_info.password = password
         return self

@@ -6,6 +6,8 @@ from tabs_dir.tab_handler.login_adapt_handler import LoginAdaptHandler
 from firebase_database import database_obj
 from tkinter import messagebox
 
+from tabs_dir.tab_upd_logic.user_profile_dao import ProfileDAO
+
 # pip install pillow ( the new PIL )
 from PIL import Image, ImageTk
 
@@ -52,14 +54,7 @@ class LoginUi:
         self.login_btn.grid(row=8, column=10)
 
     def __command_login_btn(self):
-        login_handler = LoginAdaptHandler(self)
-        if login_handler.execute():
-            database_obj.user_name_login = self.user_name.get()
-            ControllerUiLogic.disable_login_tab()
-            ControllerUiLogic.enable_tabs_after_login()
-            messagebox.showinfo("Login", "Successful Login")
-        else:
-            messagebox.showinfo("Login", "Incorrect username or password")
+        LoginAdaptHandler(self).execute()
 
     # Getters
     @property

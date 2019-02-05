@@ -8,4 +8,4 @@ class ProfileHandlerUdpName(AdaptHandler):
         self.__last_name = last_name
 
     def execute(self):
-        ServiceProfile.update_user_name(self.__first_name, self.__last_name)
+        return ServiceProfile.update_user_name(self.__first_name, self.__last_name)

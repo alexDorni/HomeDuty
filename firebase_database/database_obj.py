@@ -9,5 +9,5 @@ db = database.FireData().db
 db_users = db.collection(u'users')
 
 # User name after login
-user_name_login = None
+user_name_login = u'q'
 

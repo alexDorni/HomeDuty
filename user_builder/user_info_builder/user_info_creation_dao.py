@@ -1,4 +1,6 @@
 from user_builder.user_info_builder import user_info_builder
+from images.image_convert.image_converter import ImageConverter
+import os
 
 
 class UserInfoDAO:
@@ -15,11 +17,14 @@ class UserInfoDAO:
         # Current user info
         self.__username = "Username"
         self.__credentials = "Credentials"
-
         self.__history = "History"
+
         # History attributes
         self.__last_week_winner = None
         self.__winning_rounds = 0
+
+        # Username image attribute must be converted to bytes
+        self.image_default_path = os.getcwd() + "\images" + "\default_img_user.png"
 
     def creation_user_info(self):
         self.__creation_username()
@@ -27,9 +32,16 @@ class UserInfoDAO:
         self.__creation_history()
 
     def __creation_username(self):
+        # Create the image bytes
+        image_bytes = ImageConverter.convert_img_to_bytes(self.image_default_path)
+
+        # Decode bytes to string for serializing json
+        image_bytes = image_bytes.decode('utf-8')
+
         # Create the username obj
         username_attr = user_info_builder.UserInfoBuilder().first_name(self.__user_info_taped.first_name).\
                                                             last_name(self.__user_info_taped.last_name).\
+                                                            image(image_bytes).\
                                                             build()
 
         user_info_json = UserInfoDAO.__get_valid_json_for_user_info(username_attr)
@@ -74,6 +86,7 @@ class UserInfoDAO:
 
         json.pop("first_name")
         json.pop("last_name")
+        json.pop("image")
         json.pop("last_week_winner")
         json.pop("winning_rounds")
 
@@ -85,6 +98,7 @@ class UserInfoDAO:
 
         json.pop("first_name")
         json.pop("last_name")
+        json.pop("image")
         json.pop("last_week_winner")
         json.pop("password")
 

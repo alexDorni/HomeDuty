@@ -2,7 +2,7 @@ from tabs_dir.tab_upd_logic import user_profile_dao
 import threading
 
 
-class ProfileUpdate(threading.Thread):
+class UiProfileUpdateThread(threading.Thread):
     def __init__(self, profile_obj=None):
         threading.Thread.__init__(self)
         self.profile_obj = profile_obj
@@ -17,7 +17,9 @@ class ProfileUpdate(threading.Thread):
         self.profile_obj.entry_last_name.set(last_name_string)
 
     def update_image_label(self):
-        pass
+        img_string = self.db_user_profile.get_img_bytes()
+        self.profile_obj.convert_bytes_to_img(img_string)
+
 
     # TODO buttons lock
     # TODO start thread
