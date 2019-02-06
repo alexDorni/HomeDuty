@@ -3,6 +3,7 @@ import json
 
 class UserInfo:
     def __init__(self):
+        self.user_name = None
         self.first_name = None
         self.last_name = None
         self.image = None

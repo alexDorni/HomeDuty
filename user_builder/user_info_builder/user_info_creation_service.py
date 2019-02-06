@@ -1,23 +1,16 @@
-from user_builder.user_info_builder import user_info_builder
+from firebase_database.database_user_dao.user_info_dao import DatabaseUserInfoDao
 from images.image_convert.image_converter import ImageConverter
+from user_builder.user_info_builder import user_info_builder
 import os
 
 
-class UserInfoDAO:
-    def __init__(self, user_db=None, user_info_taped=None):
+class UserInfoService:
+    def __init__(self, user_info_taped=None):
         # Current user info taped by him
         self.__user_info_taped = user_info_taped
 
-        # Current user in database
-        self.__user_db = user_db
-
-        # User info collection
-        self.__user_info = "User_info"
-
-        # Current user info
-        self.__username = "Username"
-        self.__credentials = "Credentials"
-        self.__history = "History"
+        # Current user name
+        self.__user_info__username = self.__user_info_taped.user_name
 
         # History attributes
         self.__last_week_winner = None
@@ -39,25 +32,26 @@ class UserInfoDAO:
         image_bytes = image_bytes.decode('utf-8')
 
         # Create the username obj
-        username_attr = user_info_builder.UserInfoBuilder().first_name(self.__user_info_taped.first_name).\
-                                                            last_name(self.__user_info_taped.last_name).\
-                                                            image(image_bytes).\
-                                                            build()
+        username_attr = user_info_builder.UserInfoBuilder().\
+            first_name(self.__user_info_taped.first_name).\
+            last_name(self.__user_info_taped.last_name).\
+            image(image_bytes).\
+            build()
 
-        user_info_json = UserInfoDAO.__get_valid_json_for_user_info(username_attr)
+        user_info_json = UserInfoService.__get_valid_json_for_user_info(username_attr)
 
         # Push username into db
-        self.__user_db.collection(self.__user_info).document(self.__username).set(user_info_json)
+        DatabaseUserInfoDao.set_username(self.__user_info__username, user_info_json)
 
     def __creation_credentials(self):
         # Create obj with crypt password
         user_credentials = user_info_builder.UserInfoBuilder().password(self.__user_info_taped.password).\
                                                                build()
 
-        user_credentials_json = UserInfoDAO.__get_valid_json_for_user_credentials(user_credentials)
+        user_credentials_json = UserInfoService.__get_valid_json_for_user_credentials(user_credentials)
 
         # Push crypt password into db
-        self.__user_db.collection(self.__user_info).document(self.__credentials).set(user_credentials_json)
+        DatabaseUserInfoDao.set_credentials(self.__user_info__username, user_credentials_json)
 
     def __creation_history(self):
         # Create user history obj
@@ -65,15 +59,16 @@ class UserInfoDAO:
                                                            winning_rounds(self.__winning_rounds).\
                                                            build()
 
-        user_history_json = UserInfoDAO.__get_valid_json_for_user_history(user_history)
+        user_history_json = UserInfoService.__get_valid_json_for_user_history(user_history)
 
         # Push user history into db
-        self.__user_db.collection(self.__user_info).document(self.__history).set(user_history_json)
+        DatabaseUserInfoDao.set_history(self.__user_info__username, user_history_json)
 
     @staticmethod
     def __get_valid_json_for_user_info(user_info):
         json = user_info.obj_to_dict()
 
+        json.pop("user_name")
         json.pop("last_week_winner")
         json.pop("password")
         json.pop("winning_rounds")
@@ -84,6 +79,7 @@ class UserInfoDAO:
     def __get_valid_json_for_user_credentials(user_credentials):
         json = user_credentials.obj_to_dict()
 
+        json.pop("user_name")
         json.pop("first_name")
         json.pop("last_name")
         json.pop("image")
@@ -96,6 +92,7 @@ class UserInfoDAO:
     def __get_valid_json_for_user_history(user_history):
         json = user_history.obj_to_dict()
 
+        json.pop("user_name")
         json.pop("first_name")
         json.pop("last_name")
         json.pop("image")

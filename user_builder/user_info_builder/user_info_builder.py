@@ -5,6 +5,10 @@ class UserInfoBuilder:
     def __init__(self):
         self.user_info = user_info.UserInfo()
 
+    def user_name(self, user_name):
+        self.user_info.user_name = user_name
+        return self
+
     def first_name(self, first_name):
         self.user_info.first_name = first_name
         return self

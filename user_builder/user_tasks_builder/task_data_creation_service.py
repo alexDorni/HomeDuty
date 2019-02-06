@@ -1,11 +1,13 @@
-from user_builder.user_tasks_builder import task_data_builder as builder, task_data_daily_enum as daily_enum, \
+from firebase_database.database_user_dao.user_tasks_dao import UserTasksDao
+from user_builder.user_tasks_builder import task_data_builder as builder, \
+    task_data_daily_enum as daily_enum, \
     task_data_weekly_enum as weekly_enum
 
 
-class TaskCreationDAO:
-    def __init__(self, user_db=None):
+class TaskCreationService:
+    def __init__(self, user_name=None):
         # Current user in database
-        self.__user_db = user_db
+        self.__user_name = user_name
 
         # Tasks collection in database
         self.__tasks_coll_db = "Tasks_coll"
@@ -30,26 +32,26 @@ class TaskCreationDAO:
             for enum_task_daily in daily_enum.TaskDaily:
 
                 # Check if Task Daily Enum is same with the __task_daily_name
-                if enum_task_daily.name is task_daily:
+                if enum_task_daily.name == task_daily:
                     task = builder.TaskDataBuilder().type(self.__task_daily_type).\
                                                     state(self.__task_state).\
                                                     points(enum_task_daily.value).\
                                                     build()
 
                     # Push into database
-                    self.__user_db.collection(self.__tasks_coll_db).document(task_daily).set(task.obj_to_dict())
+                    UserTasksDao.set_task_coll(self.__user_name, task_daily, task.obj_to_dict())
 
     def __creation_weekly_task(self):
         for task_weekly in self.__task_weekly_name:
             for enum_task_weekly in weekly_enum.TaskWeekly:
 
                 # Check if Task Weekly Enum is same with the __task_weekly_name
-                if enum_task_weekly.name is task_weekly:
+                if enum_task_weekly.name == task_weekly:
                     task = builder.TaskDataBuilder().type(self.__task_weekly_type).\
                                                     state(self.__task_state).\
                                                     points(enum_task_weekly.value).\
                                                     build()
 
                     # Push into database
-                    self.__user_db.collection(self.__tasks_coll_db).document(task_weekly).set(task.obj_to_dict())
+                    UserTasksDao.set_task_coll(self.__user_name, task_weekly, task.obj_to_dict())
 

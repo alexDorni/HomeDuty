@@ -1,5 +1,5 @@
 from tabs_dir.tab_handler.adapter_handler import AdaptHandler
-from tabs_dir.tab_handler.tab_services.service_profile import ServiceProfile
+from tabs_dir.tab_handler.tab_services.service_profile import ProfileService
 
 
 class ProfileHandlerUpdImg(AdaptHandler):
@@ -7,4 +7,4 @@ class ProfileHandlerUpdImg(AdaptHandler):
         self.__img_path = img_path
 
     def execute(self):
-        return ServiceProfile().update_img_into_db(self.__img_path)
+        return ProfileService().update_img_into_db(self.__img_path)

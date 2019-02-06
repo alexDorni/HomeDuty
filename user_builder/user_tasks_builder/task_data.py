@@ -12,4 +12,3 @@ class TaskData:
 
     def dict_to_obj(self):
         return json.loads(self.obj_to_dict())
-

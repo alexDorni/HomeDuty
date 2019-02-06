@@ -1,12 +1,7 @@
 import tkinter as tk
 import os
 
-from tabs_dir.tab_controller_logic.tab_controller_logic import ControllerUiLogic
 from tabs_dir.tab_handler.login_adapt_handler import LoginAdaptHandler
-from firebase_database import database_obj
-from tkinter import messagebox
-
-from tabs_dir.tab_upd_logic.user_profile_dao import ProfileDAO
 
 # pip install pillow ( the new PIL )
 from PIL import Image, ImageTk
@@ -33,7 +28,7 @@ class LoginUi:
         image_path = os.getcwd() + "\images" + "\default_img_user.png"
         image = Image.open(image_path)
         image_resize = image.resize((250, 250), Image.ANTIALIAS)
-        photo = ImageTk.PhotoImage(image_resize)
+        photo = ImageTk.PhotoImage(image_resize, format("gif -index %"))
 
         self.image_label = tk.Label(self._master, image=photo)
         self.image_label.image = photo
