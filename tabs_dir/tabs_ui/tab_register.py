@@ -54,7 +54,6 @@ class RegUi:
         self.register_btn.grid(row=5, column=5)
 
     def __command_reg_btn(self):
-        # TODO PROGRESS TOOLBAR IMPLEMENTATION
         reg_adapt_handler = RegAdaptHandler(self)
         if reg_adapt_handler.execute():
             tk.messagebox.showinfo("Registration", "Registration Successful")

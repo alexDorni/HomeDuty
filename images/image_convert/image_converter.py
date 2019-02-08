@@ -8,10 +8,10 @@ from PIL import Image
 class ImageConverter:
     def __init__(self):
         self.image_default_path = os.getcwd() + "\images" + "\default_img_user.png"
-        self.image_user_path = os.getcwd() + "\images" + "\image_user.gif"
+        self.image_user_path = os.getcwd() + "\images" + "\image_user.png"
 
     def convert_bytes_to_img(self, bytes_string):
-
+        bytes_string = base64.b64decode(bytes_string)
         with open(self.image_user_path, "wb") as f:
             f.write(bytes_string)
 

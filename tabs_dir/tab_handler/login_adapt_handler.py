@@ -4,6 +4,8 @@ from firebase_database import database_obj
 from tabs_dir.tab_controller_logic.tab_controller_logic import ControllerUiLogic
 from tabs_dir.tab_handler.adapter_handler import AdaptHandler
 from tabs_dir.tab_handler.tab_services import service_login
+from tabs_dir.tab_upd_logic.tab_profile_upd_thread import ProfileUiUpdate
+from global_instances import TABS_MAP_FRAMES
 
 
 class LoginAdaptHandler(AdaptHandler):
@@ -19,11 +21,15 @@ class LoginAdaptHandler(AdaptHandler):
 
             messagebox.showinfo("Login", "Successful Login")
 
+            ProfileUiUpdate().update_profile_ui()
+
         else:
             messagebox.showinfo("Login", "Incorrect username or password")
 
-        # # TODO start thread when tab is selected
+        # # TODO start thread when tab is selected with Spinner
+        # TODO Must be done with a flag when data is pulled from db
         # TODO DAO DATA BASE
+        # TODO Frame switch
         # profile_thread = UiProfileUpdateThread()
         # profile_thread.start
 

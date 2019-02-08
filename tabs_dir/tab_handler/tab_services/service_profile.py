@@ -6,17 +6,8 @@ from firebase_database import database_obj
 
 class ProfileService:
     @staticmethod
-    def __convert_image_to_bytes(image_path=None):
-        image_converter = ImageConverter()
-
-        image_converter.resize_img_resolution(image_path)
-
-        return image_converter.convert_img_to_bytes_()
-
-    @staticmethod
     def update_img_into_db(image_path=None):
         img_bytes = ProfileService().__convert_image_to_bytes(image_path)
-
         # DB(users) -> user(doc) -> User_info(col) -> Username(doc) -> update {image : img_bytes}
         image_dict = {"image": img_bytes}
         DatabaseUserInfoDao.update_username(image_dict)
@@ -38,3 +29,11 @@ class ProfileService:
         database_obj.user_name_login = None
         ControllerUiLogic.enable_login_tab()
         ControllerUiLogic.select_login_tab()
+
+    @staticmethod
+    def __convert_image_to_bytes(image_path=None):
+        image_converter = ImageConverter()
+
+        image_converter.resize_img_resolution(image_path)
+
+        return image_converter.convert_img_to_bytes_()

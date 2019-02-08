@@ -1,36 +1,19 @@
 from tabs_dir.tabs_ui import tab_register, tab_login, tab_profile
+from tabs_dir.tab_controller_logic.tab_enum import Tab
 
 
-class Login:
-    def __init__(self, master=None):
-        self._master = master
-        tab_login.LoginUi(master=self._master)
+class TabFactory:
+    TAB_MAP = {
+        Tab.Login.name: tab_login.LoginUi,
+        Tab.Profile.name: tab_profile.ProfileUi,
+        Tab.Register.name: tab_register.RegUi
+    }
 
-
-class Register:
-    def __init__(self, master=None):
-        self._master = master
-        tab_register.RegUi(master=self._master)
-
-
-class Profile:
-    def __init__(self, master=None):
-        self._master = master
-        tab_profile.ProfileUi(master=self._master)
-
-
-class Lastweek:
-    def __init__(self, master=None):
-        self._master = master
-
-
-class Thisweek:
-    def __init__(self, master=None):
-        self._master = master
-
-
-class TabFactory(object):
     @staticmethod
-    def create_tab(typ, **kwargs):
-        target_class = typ.capitalize()
-        return globals()[target_class](**kwargs)
+    def create(tab_name=None, master_frame=None):
+        class_ref = TabFactory.TAB_MAP.get(tab_name)
+        if class_ref:
+            return class_ref(master_frame)
+
+        return None
+

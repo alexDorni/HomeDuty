@@ -1,7 +1,5 @@
 from firebase_database import firestore_database as database
 
-
-# TODO nu merge static
 # DB
 db = database.FireData().db
 
@@ -9,5 +7,5 @@ db = database.FireData().db
 db_users = db.collection(u'users')
 
 # User name after login
-user_name_login = u'q'
+user_name_login = None
 

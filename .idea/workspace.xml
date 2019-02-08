@@ -3,22 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="1be84106-2e04-45b2-ba3b-f788d1bea46b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase_database/database_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/firebase_database/database_obj.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_log_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_log_out.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_img.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_img.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_instances.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_instances.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/image_convert/image_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/image_convert/image_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/image_user.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spinner/spinner.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/spinner/spinner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_upd_logic/user_profile_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_builder/user_info_builder/user_info_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_builder/user_info_builder/user_info_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_dao.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_builder/user_info_builder/user_info_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_builder/user_info_builder/user_info_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_builder/user_tasks_builder/task_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_builder/user_tasks_builder/task_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_creation_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +29,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py">
+        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="43" />
+            <state relative-caret-position="238">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="e#0#80#0" expanded="true" />
               </folding>
@@ -41,33 +41,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py">
+        <entry file="file://$PROJECT_DIR$/ui_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="19" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py">
+        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+            <state relative-caret-position="204">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
               <folding>
-                <element signature="e#0#81#0" expanded="true" />
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="488">
+              <caret line="51" column="36" lean-forward="true" selection-end-line="78" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/spinner/spinner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+            <state relative-caret-position="136">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -97,47 +97,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="63" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="63" />
+            <state relative-caret-position="428">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding>
-                <element signature="e#0#81#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firebase_database/database_user_dao/user_tasks_dao.py">
+        <entry file="file://$PROJECT_DIR$/frame_switch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="102">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3149">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -165,6 +144,12 @@
       <find>database_structure</find>
       <find>database_set_structure</find>
       <find>dict_info</find>
+      <find>ProfileUi</find>
+      <find>tab_frame_dic</find>
+      <find>dic</find>
+      <find>user_name_login</find>
+      <find>__master</find>
+      <find>.__master</find>
     </findStrings>
     <replaceStrings>
       <replace>dict_info</replace>
@@ -179,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/user_info_builder/user_info_builder.py" />
         <option value="$PROJECT_DIR$/user_info_builder/user_info_creation_dao.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/reg_adapt_handler.py" />
         <option value="$PROJECT_DIR$/user_tasks_builder/task_data_creation_dao.py" />
@@ -197,39 +181,40 @@
         <option value="$PROJECT_DIR$/tabs_dir/tab_controller.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logout.py" />
         <option value="$PROJECT_DIR$/global_ui.py" />
-        <option value="$PROJECT_DIR$/global_instances.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_enum.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py" />
-        <option value="$PROJECT_DIR$/ui_app.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py" />
-        <option value="$PROJECT_DIR$/images/image_convert/image_converter.py" />
-        <option value="$PROJECT_DIR$/firebase_database/database_obj.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_upd_logic/user_profile_dao.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py" />
         <option value="$PROJECT_DIR$/firebase_database/database_dao.py" />
         <option value="$PROJECT_DIR$/user_builder/user_info_builder/user_info_data.py" />
         <option value="$PROJECT_DIR$/user_builder/user_info_builder/user_info_builder.py" />
         <option value="$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_dao.py" />
         <option value="$PROJECT_DIR$/user_builder/user_tasks_builder/task_data.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py" />
         <option value="$PROJECT_DIR$/firebase_database/database_user_dao/user_tasks_dao.py" />
         <option value="$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_creation_service.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py" />
-        <option value="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py" />
         <option value="$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_service.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_log_out.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_img.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_name.py" />
-        <option value="$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py" />
         <option value="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py" />
+        <option value="$PROJECT_DIR$/images/image_convert/image_converter.py" />
+        <option value="$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py" />
+        <option value="$PROJECT_DIR$/firebase_database/database_obj.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py" />
+        <option value="$PROJECT_DIR$/global_instances.py" />
+        <option value="$PROJECT_DIR$/ui_app.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py" />
         <option value="$PROJECT_DIR$/images/spinner/spinner.py" />
+        <option value="$PROJECT_DIR$/frame_switch.py" />
+        <option value="$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py" />
       </list>
     </option>
   </component>
@@ -297,7 +282,31 @@
               <item name="Home Duty" type="b2602c69:ProjectViewProjectNode" />
               <item name="Home Duty" type="462c0819:PsiDirectoryNode" />
               <item name="tabs_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="tab_handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Home Duty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Home Duty" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="tab_handler" type="462c0819:PsiDirectoryNode" />
+              <item name="tab_services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Home Duty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Home Duty" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs_dir" type="462c0819:PsiDirectoryNode" />
               <item name="tab_upd_logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Home Duty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Home Duty" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs_ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Home Duty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Home Duty" type="462c0819:PsiDirectoryNode" />
+              <item name="user_builder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -410,16 +419,16 @@
     <frame x="1974" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25762528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25762528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24818276" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24818276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.22222222" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -449,13 +458,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/google/cloud/firestore_v1beta1/_helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="443" column="71" lean-forward="true" selection-start-line="443" selection-start-column="71" selection-end-line="443" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Tools/scripts/google.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -482,41 +484,7 @@
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adapt_handler.py" />
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logout.py" />
     <entry file="file://$PROJECT_DIR$/global_ui.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="1704" selection-start-line="1704" selection-end-line="1704" />
-          <folding>
-            <element signature="e#1088#1099#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_recover.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/ttk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="298" selection-start-line="298" selection-end-line="298" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firebase_database/firestore_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -527,44 +495,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firebase_database/database_obj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase_database/database_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="43" selection-end-line="106" />
-          <folding>
-            <element signature="e#1#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/global_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_creation_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="28" lean-forward="true" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase_database/database_dao.py" />
+    <entry file="file://$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_dao.py" />
+    <entry file="file://$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_creation_dao.py" />
     <entry file="file://$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_daily_enum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -600,23 +533,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd.py" />
     <entry file="file://$PROJECT_DIR$/user_builder/user_tasks_builder/task_data_creation_service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-327">
@@ -631,32 +548,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/user_profile_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/user_profile_dao.py" />
     <entry file="file://$PROJECT_DIR$/user_builder/user_info_builder/user_info_creation_service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="59" lean-forward="true" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-701">
-          <caret line="20" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_img.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_name.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -701,98 +589,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_enum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image_convert/image_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/adapter_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,32 +606,214 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_enum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/profile_adapt_handler/profile_adpt_hndl_upd_img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image_convert/image_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/firebase_database/database_user_dao/user_info_dao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3149">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/firebase_database/database_obj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tabs_dir/tab_upd_logic/tab_profile_upd_thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="63" />
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/tab_services/service_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global_instances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="2223" selection-start-line="2223" selection-end-line="2223" />
+          <folding>
+            <element signature="e#1088#1099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/spinner/spinner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+        <state relative-caret-position="136">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/ttk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="912" column="22" lean-forward="true" selection-start-line="912" selection-start-column="22" selection-end-line="912" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="133" column="37" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame_switch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_controller_logic/tab_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tabs_ui/tab_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="51" column="36" lean-forward="true" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabs_dir/tab_handler/login_adapt_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

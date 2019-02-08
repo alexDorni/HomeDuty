@@ -1,7 +1,5 @@
 from firebase_database.database_obj import db_users
-from firebase_database.database_obj import user_name_login
-
-# TODO modify all data in the project with DatabaseUserInfoDao
+from firebase_database import database_obj
 
 
 class DatabaseUserInfoDao:
@@ -35,7 +33,7 @@ class DatabaseUserInfoDao:
     # Database update structure
     @staticmethod
     def update_structure():
-        __db_users = db_users.document(user_name_login).\
+        __db_users = db_users.document(database_obj.user_name_login).\
             collection(DatabaseUserInfoDao.user_info_collection)
 
         return __db_users

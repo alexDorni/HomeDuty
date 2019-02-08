@@ -15,4 +15,6 @@ class InterfaceDuty(tk.Frame):
         # Global instance for tabs ui
         global_instances.TABS = tab
 
+        global_instances.TABS_MAP_FRAMES = tab.tab_frame_dict
+
         tab.create_tabs()
