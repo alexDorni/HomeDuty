@@ -10,4 +10,7 @@ TAB_NOTEBOOK = None
 # Tab frames objects
 TABS_MAP_FRAMES = {}
 
+# Threads
+THREADS_DICT = {}
+
 

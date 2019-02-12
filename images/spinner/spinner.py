@@ -30,7 +30,7 @@ class Spinner(tk.Frame):
             return
         self.__master.after(33, lambda: self.animate((counter + 1) % len(self.sequence)))
         print("animate")
-#
+# #
 # import os
 # import tkinter as tk
 # from PIL import Image, ImageTk, ImageSequence
@@ -60,3 +60,17 @@ class Spinner(tk.Frame):
 #         self.__master.after(33, lambda: self.animate((counter + 1) % len(self.sequence)))
 #         print("animate")
 #
+#
+# import threading
+# import time
+#
+#
+# class Spinner(threading.Thread):
+#     def __init__(self, login_info):
+#         self.__login_info = login_info
+#         threading.Thread.__init__(self)
+#
+#     def run(self):
+#         self.__login_info.update_spinner(0)
+#         time.sleep(1)
+

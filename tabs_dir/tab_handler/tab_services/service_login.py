@@ -3,6 +3,7 @@ from firebase_database import database_obj
 from firebase_database import password_crypt
 
 
+# TODO LOG IN THREAD REQUEST ON DB
 class LoginService:
     @staticmethod
     def __validate(login_info):

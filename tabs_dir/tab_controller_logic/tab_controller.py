@@ -15,6 +15,7 @@ class TabController:
             tab_frame = ttk.Frame(self.tab_control)
             # {Enum : new tab Frame}
             self.tab_control.add(tab_frame, text=enum_tab.name)
+            # TODO BIND EVENTS TO TABS SELECTED
 
             ui_obj_tab = tab_factory.TabFactory.create(enum_tab.name, tab_frame)
             self.tab_frame_dict.update({enum_tab.name: ui_obj_tab})
