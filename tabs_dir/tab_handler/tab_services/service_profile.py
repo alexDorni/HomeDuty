@@ -3,11 +3,16 @@ from images.image_convert.image_converter import ImageConverter
 from firebase_database.database_user_dao.user_info_dao import DatabaseUserInfoDao
 from firebase_database import database_obj
 
+from tkinter import messagebox
+
 
 class ProfileService:
     @staticmethod
     def update_img_into_db(image_path=None):
         img_bytes = ProfileService().__convert_image_to_bytes(image_path)
+        if not img_bytes:
+            return False
+
         # DB(users) -> user(doc) -> User_info(col) -> Username(doc) -> update {image : img_bytes}
         image_dict = {"image": img_bytes}
         DatabaseUserInfoDao.update_username(image_dict)
@@ -33,7 +38,9 @@ class ProfileService:
     @staticmethod
     def __convert_image_to_bytes(image_path=None):
         image_converter = ImageConverter()
-
-        image_converter.resize_img_resolution(image_path)
-
-        return image_converter.convert_img_to_bytes_()
+        is_converted = image_converter.resize_img_resolution(image_path)
+        if is_converted:
+            return image_converter.convert_img_to_bytes_()
+        else:
+            messagebox.showinfo("Image", "Wrong image format")
+            return None

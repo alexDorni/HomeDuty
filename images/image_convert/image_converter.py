@@ -16,8 +16,13 @@ class ImageConverter:
             f.write(bytes_string)
 
     def resize_img_resolution(self, image_path=None):
-        image = Image.open(image_path)
-        image.save(self.image_user_path, dpi=(600, 600))
+        try:
+            image = Image.open(image_path)
+            image.save(self.image_user_path, dpi=(600, 600))
+            return True
+
+        except OSError:
+            return False
 
     def convert_img_to_bytes_(self):
         # Convert for the new image of current user

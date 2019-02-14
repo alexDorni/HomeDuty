@@ -1,4 +1,6 @@
 import tkinter as tk
+
+from tabs_dir.tab_controller_logic.tab_controller_logic import ControllerUiLogic
 from tabs_dir.tab_handler.reg_adapt_handler import RegAdaptHandler
 
 
@@ -14,9 +16,9 @@ class RegUi:
         self.password_ret = None
         self.register_btn = None
 
-        self.create_ui_register()
+        self.__create_ui_register()
 
-    def create_ui_register(self):
+    def __create_ui_register(self):
         self.__create_user_name()
         self.__create_first_name()
         self.__create_last_name()
@@ -57,42 +59,17 @@ class RegUi:
         reg_adapt_handler = RegAdaptHandler(self)
         if reg_adapt_handler.execute():
             tk.messagebox.showinfo("Registration", "Registration Successful")
+            ControllerUiLogic.select_login_tab()
         else:
             tk.messagebox.showinfo("Registration", "Registration Failed! \nSome problems could be:\n"
                                                    "Blank fields \nWrong password \nUser already exists")
+        self.__reset_entrys()
 
-    # Getters
-    @property
-    def user_name(self):
-        return self._user_name
-
-    @property
-    def password_ins(self):
-        return self._password_ins
-
-    @property
-    def password_ret(self):
-        return self._password_ret
-
-    @property
-    def register_btn(self):
-        return self._register_btn
-
-    # Setters
-    @user_name.setter
-    def user_name(self, val):
-        self._user_name = val
-
-    @password_ins.setter
-    def password_ins(self, val):
-        self._password_ins = val
-
-    @password_ret.setter
-    def password_ret(self, val):
-        self._password_ret = val
-
-    @register_btn.setter
-    def register_btn(self, val):
-        self._register_btn = val
+    def __reset_entrys(self):
+        self.user_name.delete(0, "end")
+        self.first_name.delete(0, "end")
+        self.last_name.delete(0, "end")
+        self.password_ins.delete(0, "end")
+        self.password_ret.delete(0, "end")
 
 

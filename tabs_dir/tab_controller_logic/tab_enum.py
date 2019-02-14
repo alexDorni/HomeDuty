@@ -5,6 +5,6 @@ from enum import Enum, unique
 class Tab(Enum):
     Login = 0
     Profile = 1
-    LastWeek = 2
-    ThisWeek = 3
+    ThisWeek = 2
+    LastWeek = 3
     Register = 4

@@ -3,82 +3,72 @@ import os
 
 import global_instances
 from firebase_database import database_obj
+from tabs_dir.tab_upd_logic.tab_profile_update import ProfileUiUpdate
 from tabs_dir.tab_controller_logic.tab_controller_logic import ControllerUiLogic
 from tabs_dir.tab_handler.login_adapt_handler import LoginAdaptHandler
-from images.spinner.spinner_path import spinner_path
+from images.spinner.spinner_path import spinner_path, GIF_FRAMES_COUNT
 
 # pip install pillow ( the new PIL )
 from PIL import Image, ImageTk
 
-from tabs_dir.tabs_ui.login_thread import LoginThread
+from tabs_dir.tabs_ui.tabs_threads.tab_login_threads.login_thread import LoginThread
 
 
 class LoginUi:
-    GIF_FRAMES_COUNT = 50
-
     def __init__(self, master=None):
-        self._master = master
+        self.__master = master
 
         self.image_label = None
         self.image_spinner_label = None
-        self.image_spinner_frames = None
         self.user_name = None
         self.password_ins = None
         self.login_btn = None
 
-        self.in_progress = False
+        self.image_spinner_frames = []
+        self.login_in_progress = False
 
-        self.create_ui_login()
+        self.__create_ui_login()
 
-    def create_ui_login(self):
+    def on_login_done(self, is_successful=False):
+        self.login_in_progress = False
+
+        if is_successful:
+            # Update the current user in the app
+            database_obj.user_name_login = self.user_name.get()
+
+            ProfileUiUpdate().update_profile_ui()
+            ControllerUiLogic.disable_login_tab()
+            ControllerUiLogic.enable_tabs_after_login()
+            tk.messagebox.showinfo("Login", "Login successful")
+        else:
+            tk.messagebox.showinfo("Login", "Username or password incorrect")
+
+        self.__enable_user_actions()
+
+        self.image_spinner_label.grid_remove()
+
+        # Kill the thread
+        global_instances.THREADS_DICT.pop(LoginThread.THREAD_NAME)
+
+    def __on_login_started(self):
+        self.login_in_progress = True
+
+        self.__disable_user_actions()
+
+        # Make the spinner visible
+        self.image_spinner_label.grid(row=9, column=5)
+
+        # Start the spinner
+        self.__update_spinner(0)
+
+        LoginAdaptHandler(self).execute()
+
+    def __create_ui_login(self):
         self.__create_image()
         self.__create_username()
         self.__create_password()
         self.__create_login_btn()
-        self.create_spinner()
-
-    def create_spinner(self):
-        self.image_spinner_label = tk.Label(self._master)
-        self.image_spinner_label.grid(row=9, column=10)
-        self.image_spinner_frames = [tk.PhotoImage(file=spinner_path, format="gif -index %i" % i) for i in range(LoginUi.GIF_FRAMES_COUNT)]
-
-    def update_spinner(self, ind):
-        if not self.in_progress:
-            return
-
-        ind %= LoginUi.GIF_FRAMES_COUNT
-        spinner_frame = self.image_spinner_frames[ind]
-        ind += 1
-        self.image_spinner_label.configure(image=spinner_frame)
-        self._master.after(100, self.update_spinner, ind)
-
-    def on_login_done(self, is_successful=False):
-        self.in_progress = False
-        # TODO enable fields
-        # TODO HIDE SPINNER
-        # TODO THINK DESTROY SPINNER
-        if is_successful:
-            # message box
-            self.image_spinner_label.grid_remove()
-            database_obj.user_name_login = self.user_name.get()
-            ControllerUiLogic.disable_login_tab()
-            ControllerUiLogic.enable_tabs_after_login()
-            print("Login Successful")
-        else:
-            print("Login Failed")
-
-        global_instances.THREADS_DICT.pop(LoginThread.THREAD_NAME)
-        print("POP", global_instances.THREADS_DICT)
-
-    def on_login_started(self):
-        self.in_progress = True
-        self.image_spinner_label.grid(row=9, column=10)
-        self.update_spinner(0)
-
-        login_thread = LoginThread(self)
-        global_instances.THREADS_DICT[LoginThread.THREAD_NAME] = login_thread
-        print("ADD", global_instances.THREADS_DICT)
-        login_thread.start()
+        self.__create_spinner()
 
     def __create_image(self):
         image_path = os.getcwd() + "\images" + "\default_img_user.png"
@@ -86,52 +76,58 @@ class LoginUi:
         image_resize = image.resize((250, 250), Image.ANTIALIAS)
         photo = ImageTk.PhotoImage(image_resize)
 
-        self.image_label = tk.Label(self._master, image=photo)
+        self.image_label = tk.Label(self.__master, image=photo)
         self.image_label.image = photo
-        self.image_label.grid(row=0, column=10)
+        self.image_label.grid(row=0, column=2)
 
     def __create_username(self):
-        tk.Label(self._master, text="User Name").grid(row=4)
-        self.user_name = tk.Entry(self._master)
+        tk.Label(self.__master, text="User Name").grid(row=4)
+        self.user_name = tk.Entry(self.__master)
         self.user_name.grid(row=4, column=1)
 
     def __create_password(self):
-        tk.Label(self._master, text="Password").grid(row=5)
-        self.password_ins = tk.Entry(self._master)
+        tk.Label(self.__master, text="Password").grid(row=5)
+        self.password_ins = tk.Entry(self.__master)
         self.password_ins.grid(row=5, column=1)
 
     def __create_login_btn(self):
-        self.login_btn = tk.Button(self._master,
+        self.login_btn = tk.Button(self.__master,
                                    activebackground='green',
                                    text="Login", command=self.__command_login_btn)
-        self.login_btn.grid(row=8, column=10)
+        self.login_btn.grid(row=6, column=2)
 
     def __command_login_btn(self):
-        self.on_login_started()
-        # LoginAdaptHandler(self).execute()
+        self.__on_login_started()
 
-    # Getters
-    @property
-    def user_name(self):
-        return self._user_name
+    def __create_spinner(self):
+        self.image_spinner_label = tk.Label(self.__master)
+        self.image_spinner_label.config(height=250, width=250)
+        self.image_spinner_label.grid(row=9, column=5)
 
-    @property
-    def password_ins(self):
-        return self._password_ins
+        self.image_spinner_frames = [tk.PhotoImage(file=spinner_path,
+                                                   format="gif -index %i" % i) for i in range(GIF_FRAMES_COUNT)
+                                     ]
 
-    @property
-    def login_btn(self):
-        return self._login_btn
+    def __update_spinner(self, ind):
+        if not self.login_in_progress:
+            return
 
-    # Setters
-    @user_name.setter
-    def user_name(self, val):
-        self._user_name = val
+        ind %= GIF_FRAMES_COUNT
+        spinner_frame = self.image_spinner_frames[ind]
+        ind += 1
+        self.image_spinner_label.configure(image=spinner_frame)
+        self.__master.after(100, self.__update_spinner, ind)
 
-    @password_ins.setter
-    def password_ins(self, val):
-        self._password_ins = val
+    def __disable_user_actions(self):
+        self.user_name.configure(state="disabled")
+        self.password_ins.configure(state="disabled")
+        self.login_btn.configure(state="disabled")
 
-    @login_btn.setter
-    def login_btn(self, val):
-        self._login_btn = val
+    def __enable_user_actions(self):
+        self.user_name.configure(state="normal")
+        self.password_ins.configure(state="normal")
+        self.login_btn.configure(state="normal")
+
+        # Reset fields
+        self.user_name.delete(0, "end")
+        self.password_ins.delete(0, "end")
