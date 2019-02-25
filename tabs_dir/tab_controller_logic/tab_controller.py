@@ -19,6 +19,8 @@ class TabController:
             ui_obj_tab = tab_factory.TabFactory.create(enum_tab.name, tab_frame)
             self.tab_frame_dict.update({enum_tab.name: ui_obj_tab})
 
-        self.tab_control.pack(expand=1, fill="both")
-        ControllerUiLogic.disable_tabs_before_login()
+        self.tab_control.pack(expand=True, fill="both")
+        # TODO enable after the ui it's done
+        # ControllerUiLogic.disable_tabs_before_login()
+        ControllerUiLogic.select_this_week_tab()
 

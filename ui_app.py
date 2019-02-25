@@ -8,7 +8,8 @@ class InterfaceDuty(tk.Frame):
         super().__init__(master)
         self.master = master
         self.master.title("Home duty")
-        self.master.geometry("800x600")
+        self.master.geometry("900x900")
+        # self.master.resizable(False, False)
         self.pack()
         tab = tab_controller.TabController(master)
 

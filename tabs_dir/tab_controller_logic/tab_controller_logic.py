@@ -37,3 +37,7 @@ class ControllerUiLogic:
     def select_login_tab():
         global_instances.TABS.tab_control.select(tab_enum.Tab.Login.value)
 
+    @staticmethod
+    def select_this_week_tab():
+        global_instances.TABS.tab_control.select(tab_enum.Tab.ThisWeek.value)
+

@@ -116,7 +116,7 @@ class ProfileUi:
 
     def __create_image_label(self, image_path):
         image = Image.open(image_path)
-        image_resize = image.resize((250, 250), Image.ANTIALIAS)
+        image_resize = image.resize((350, 350), Image.ANTIALIAS)
         photo = ImageTk.PhotoImage(image_resize)
 
         self.image_label = tk.Label(self.__master, image=photo)

@@ -59,7 +59,7 @@ class LoginUi:
         self.image_spinner_label.grid(row=9, column=5)
 
         # Start the spinner
-        self.__update_spinner(0)
+        self.__update_spinner()
 
         LoginAdaptHandler(self).execute()
 
@@ -73,7 +73,7 @@ class LoginUi:
     def __create_image(self):
         image_path = os.getcwd() + "\images" + "\default_img_user.png"
         image = Image.open(image_path)
-        image_resize = image.resize((250, 250), Image.ANTIALIAS)
+        image_resize = image.resize((150, 150), Image.ANTIALIAS)
         photo = ImageTk.PhotoImage(image_resize)
 
         self.image_label = tk.Label(self.__master, image=photo)
@@ -102,13 +102,13 @@ class LoginUi:
     def __create_spinner(self):
         self.image_spinner_label = tk.Label(self.__master)
         self.image_spinner_label.config(height=250, width=250)
-        self.image_spinner_label.grid(row=9, column=5)
+        self.image_spinner_label.grid(row=9, column=3)
 
         self.image_spinner_frames = [tk.PhotoImage(file=spinner_path,
                                                    format="gif -index %i" % i) for i in range(GIF_FRAMES_COUNT)
                                      ]
 
-    def __update_spinner(self, ind):
+    def __update_spinner(self, ind=0):
         if not self.login_in_progress:
             return
 

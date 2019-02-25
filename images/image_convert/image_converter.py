@@ -18,7 +18,7 @@ class ImageConverter:
     def resize_img_resolution(self, image_path=None):
         try:
             image = Image.open(image_path)
-            image.save(self.image_user_path, dpi=(600, 600))
+            image.save(self.image_user_path, dpi=(1600, 1024))
             return True
 
         except OSError:
